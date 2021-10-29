@@ -1,0 +1,329 @@
+*{
+    margin: 0px;
+    font-family: 'Titillium Web', sans-serif;   
+}
+
+.top{
+    display: flex;
+    justify-content:space-around;
+    font-size: 2vw;
+    text-align: center;
+    align-content: center;     
+}
+
+.top>div{
+    text-align: center;
+    width: 33.33%;
+    align-content: center;
+}
+
+header{
+    position: sticky;
+    top:0;
+    background-color: white;
+}
+
+h1{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 4vw;
+    color: black;
+}
+
+#btn-menu:checked ~ .menu {   
+    margin-top: -20%;
+    margin-left: -5vw;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2vw;
+    text-align: center;
+    position: sticky;
+    top:00%;
+    align-content: center;
+}
+
+nav>div{
+    text-align: center;
+    width: 33.33%;
+    align-content: center;
+}
+
+#btn-menu {
+    display: none;
+}
+#btn-menuh {
+    display: none;
+}
+
+div label { 
+    display: flex;
+}
+
+.ham>label{
+    display: none;
+}
+
+
+div label:hover{
+    cursor: pointer;
+    
+}
+
+.menu {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    margin-left: -200%; 
+    margin-top: -205%; 
+    
+    /* transition: 0.5s; */
+}
+.menuh ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    transition: 0.5s;
+    display: flex;
+    width: 16vw;
+    }  
+
+.menuh li{
+    margin: 0.2vw;
+}
+
+.menu ul{
+   margin-left: -100%; 
+}
+
+.menu li{
+    margin-right: 1vw;}
+    
+.menu li a {
+    font-size: 2vw;
+}
+
+.menuh li a {
+    font-size: 2vw;
+}
+ 
+#btn-menu:checked ~ .menu ul{
+    margin: 2vw;
+}
+
+h2{
+    font-size: 3vw;
+    text-align: center;
+}
+
+h3{
+    align-content: center; 
+}
+
+h4{
+    font-size: 2vw;
+    text-align: center; 
+}
+
+a:link {
+    color: black;
+}
+a:visited{color: black;}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+.fotos > div {border-color: rgb(185, 177, 177);
+    border-width: 0.2vw;
+    border-style: groove;
+
+}
+.fotos  img{
+    width: 15vw; height: auto;
+}
+
+.fotos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.slider{
+    overflow: hidden;
+}
+
+.slider img{
+    width: 55vw; height: 10vw;
+    text-align: center;
+    display: block;
+    margin: auto;   
+}
+
+.slider ul{
+    padding: 0mm;
+    display: flex;
+    width: 200%;
+    animation: cambio 10s infinite;
+    animation-direction: alternate;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+@keyframes cambio{
+    0% {margin-left:0;}
+    40% {margin-left:0;}
+    60% {margin-left:-100%;}
+    100% {margin-left:-100%;}
+}
+
+p{
+    font-size: 1.8vw;
+    text-align: center;
+}
+
+.precio{
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+
+.historia{
+    font-size: xx-small;
+    width: 70%;
+    border-color:black;
+    border-style: double;
+    border-width: 0.5vw;
+    text-align: center;
+    margin:auto;
+    padding: 1vw;
+}
+
+.cuerpo{
+    display: flex;
+    justify-content: space-around;
+    /* text-align: center; */
+    border-top-style: solid;
+    box-sizing: initial;
+    border-color: black;
+    width: 90%;
+    padding-top: 4vw;
+    margin: auto;
+    border-width: 0.2vw;
+}
+
+footer{
+    border-top-style: solid;
+    border-width: 0.2vw;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+footer p{
+    font-size: 20px;
+}
+
+@media (max-width:768px ){
+    div label{
+        display: block;
+    
+    }
+    .ham>label{
+        display:flex;
+        margin: 1vw;
+        font-size: 3vw;
+    }
+    .slider img{
+        width: 90vw; height: 14vw;
+    }
+    
+    .menuh{
+        visibility: hidden;
+        margin-top: -50%;
+        font-size: 30px; 
+    }
+
+    .menu ul{
+        margin-top: -220%;
+        margin-left: -300%;
+        
+    }
+    #btn-menu:checked ~ .menu ul{
+        margin-left: 20vw;
+        margin-top: -1vw;
+        background-color: white; 
+    }
+
+    .menuh ul{
+        flex-direction: column;
+        font-size: 2vw;
+        z-index: 200;
+       
+        
+    }
+    #btn-menuh:checked ~ .menuh{
+        margin: 0;
+        visibility: visible;
+        width: 15vw;
+    }
+
+    .menuh label{
+        display: flex;
+    }
+    .menuh li{
+        margin-top: 1vw;
+        height: 3vw;
+    }
+    #btn-menu:checked ~ .menu {
+        margin-left: 5vw;
+    }
+    .fotos  img{
+        width: 20vw; height: auto;
+    }
+
+    .fotos{
+        flex-wrap: wrap;
+    }
+    .cuerpo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        border-top-style: solid;
+        box-sizing: initial;
+        border-color: black;
+        width: 90%;
+        padding-top: 4vw;
+        margin: auto;
+        border-width: 0.2vw;
+    }
+
+    .mapa{
+        margin-top: 2vw;
+    }
+}
+
+@media (max-width:600px ){
+    
+    
+
+    .fotos  img{
+        width: 30vw; 
+        height: auto;   
+    }
+
+    .fotos{
+        margin-top: 1vw;
+        display: grid;
+        grid-template-columns: repeat(2, auto);  
+    }
+
+    div iframe{
+        width: 300;
+        height: 200;
+
+    }
+}
